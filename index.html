@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c45f99093c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="gameContainer">
+        
+        <div class="navbar" >
+            <h2 class="brand navbar-brand">Ping Pong</h2>
+            <span class="nav-item"  onclick="pauseGame()" ><i class="fa-solid fa-pause"></i></span>
+            <span class="nav-item"  onclick="mute()"><i class="fa-sharp fa-solid fa-volume-xmark"></i></span>
+            <span class="nav-item" onclick="win(1);"><i class="fa-solid fa-rotate-right"></i></span>
+           
+        </div>
+        <h3 class="levelStatus">Level</h3>
+        <canvas id="cnvs" width="350px" height="550px"></canvas>
+        
+        <div class="levelSelector">
+            <h2 class="brand header">Ping Pong</h2>
+            <div class="levelSelect" >
+                <span class="level level-active" onclick="setLevel(1);">Easy </span>
+                <span class="level" onclick="setLevel(2);">Medium</span>
+                <span class="level" onclick="setLevel(3);">Hard</span>
+            </div>
+            <button class="btn play"  onclick="game();"><i class="fa-solid fa-play"></i> Play</button>
+        </div>
+        
+        <div class="gameOver" >
+            <h2 class="winStatus" ></h2>
+            <button class="btn playAgainBtn" onclick="restart()" >Play Again</button></li>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
